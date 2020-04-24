@@ -1,0 +1,245 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-color: #191b25;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*font-family: 'Domine', serif;
+font-family: 'Open Sans', sans-serif;*/
+
+nav {
+    background-color: #191b25;
+    text-decoration: none;
+    height: 60px;
+    text-transform: none;
+
+}
+
+#nav-logo {
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 0 40px;
+}
+
+nav ul {
+    float: right;
+    margin: 20px 40px 0 0;
+}
+
+nav li {
+    display: inline;
+    font-family: 'Domine', serif;
+    padding: 10px;
+}
+
+nav li a {
+    list-style: none;
+    text-decoration: none;
+    color: #DDDEE7;
+
+}
+
+#nav-button {
+    background-color: #deac66;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 104px;
+    margin-top: 24px;
+    padding: 8px;
+}
+
+
+#header-box {
+    position: absolute;
+    margin: 60px 0 0 40px;
+
+}
+
+header #header-box h1 {
+    font-family: 'Domine', serif;
+    font-size: 32px;
+    color: #DDDEE7;
+}
+
+header #header-box p {
+    width: 500px;
+    font-family: 'Open Sans', sans-serif;
+    color: #DDDEE7;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    line-height: 1.5em;;
+
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/time-lapse-photography-of-four-black-metal-cooking-wares-954677.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#about-section {
+    
+        padding: 75px 0;
+        margin: 0 auto;
+}
+      
+#about-section p {
+        width: 60%;
+        margin: 10px auto;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        color: #DDDEE7;
+}
+
+#about-section h2 {
+    font-size: 4.2em;
+    text-align: center;
+    line-height: 1em;
+    font-family: 'Domine', serif;
+    color: #DDDEE7;
+}
+
+#service-section h2 {
+    font-size: 4.2em;
+    text-align: center;
+    line-height: 1em;
+    font-family: 'Domine', serif;
+    color: #DDDEE7;
+}
+
+.schedule-table {
+    margin: 40px 0 40px 35%;
+
+}
+
+
+.schedule-table th,
+td {
+  border: 1px solid #DDDEE7;
+  padding: 30px 50px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #DDDEE7;
+  border-radius: 20%;
+}
+
+
+
+#book-section h2 {
+    font-size: 4.2em;
+    text-align: center;
+    line-height: 1em;
+    font-family: 'Domine', serif;
+    color: #DDDEE7; 
+}
+
+#book-section .book-info-box {
+    margin: 40px 0 40px 35%;
+}
+
+#book-section .book-info-box h3 {
+    font-size: 2.2em;
+    margin-bottom: 16px;
+    font-family: 'Domine', serif;
+    color: #DDDEE7;
+}
+
+label {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #DDDEE7;
+    margin: 20px;
+}
+
+input {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #DDDEE7;
+    margin: 20px
+
+}
+
+#contact-section h2 {
+    font-size: 4.2em;
+    text-align: center;
+    line-height: 1em;
+    font-family: 'Domine', serif;
+    color: #DDDEE7;
+}
+#contact-section .contact-section-box {
+    margin: 40px 0 40px 35%;
+}
+footer {
+    color: white;
+    background-color: #20222b;
+}
+
+footer h3 {
+    font-size: 2.2em;
+    text-align: center;
+    line-height: 1em;
+    font-family: 'Domine', serif;
+    padding: 30px;
+    color: #DDDEE7;
+}
+
+footer address {
+    font-size: 18px;
+    text-align: center;
+    padding: 30px;
+}
+
+#footer-p {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
+

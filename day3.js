@@ -69,6 +69,7 @@ Create a second object with name, surname, email address and verify that this ob
     driversLincense: true
 };
 delete human1.age;
+
 let human2 = {
     name: "hakeem",
     email: "Hafeetech@gmail.com",
