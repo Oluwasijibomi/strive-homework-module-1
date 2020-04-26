@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Strive Calculator
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="./day7.css">
+    </head>
+
+    <body>
+        <div id="calculator">
+            <table>
+
+                <tr>
+                    <th colspan="4">
+                        <input type="text" value="0" id="result" disabled>
+                    </th>
+                </tr>
+         
+
+                <tr>
+                    <td><button class="numericButton" value="7">7</button></td>
+                    <td><button class="numericButton" value="8">8</button></td>
+                    <td><button class="numericButton" value="9">9</button></td>
+                    <td><button class="functionButton" value="*">*</button></td>
+
+                </tr>
+
+                <tr>
+                    <td><button class="numericButton" value="4">4</button></td>
+                    <td><button class="numericButton" value="5">5</button></td>
+                    <td><button class="numericButton" value="6">6</button></td>
+                    <td><button class="functionButton" value="-">-</button></td>
+                </tr>
+
+
+                <tr>
+                    <td><button class="numericButton" value="1">1</button></td>
+                    <td><button class="numericButton" value="2">2</button></td>
+                    <td><button class="numericButton" value="3">3</button></td>
+                    <td><button class="functionButton" value="+">+</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="functionButton" value="C">C</button></td>
+                    <td><button class="numericButton" value="0">0</button></td>
+                    <td><button class="functionButton" value="=">=</button></td>
+                    <td><button class="functionButton" value="/">/</button></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                console.log("DOM LOADED")
+                // Memory of our calculator
+                let operation = ""
+                let previousResult = 0 // FIRST OPERAND
+
+                const sum = function(x,y){
+                    return x + y
+                }
+                // const sum - (x,y) ---> x + y
+
+                const diff = function(x,y){
+                    return x - y
+                }
+
+                const mul = function(x,y){
+                    return x * y
+                }
+
+                const div = function(x,y){
+                    return x / y
+                }
+
+                
+
+
+                const numericButtonPressed = function (event) {
+                    const numberPressed = event.target.value
+                    console.log(numberPressed)
+                    const result = document.getElementById("result")
+
+                    if (result.value === "0") {
+                        result.value = numberPressed
+                    } else {
+                        result.value = result.value + numberPressed
+                    }
+                }
+
+                const functionButtonPressed = function(event) {
+                    const keyPressed = event.target.value
+                    console.log(keyPressed)
+                    const result = document.getElementById("result")
+
+                    switch (keyPressed) {
+                        case "=": // compute and display the result
+
+                            switch(operation) { // switch between + -
+                            case "+":
+                                //first operand + second ----> result.value
+                                result.value = sum(previousResult, parseFloat(result.value))
+                                break;
+                            case "-":
+                                result.value = diff(previousResult, parseFloat(result.value))
+                                break;
+                            case "*":
+                                result.value = mul(previousResult, parseFloat(result.value))
+                                break;
+                            case "/":
+                                result.value = div(previousResult, parseFloat(result.value))
+                                break;
+                            default:
+                            console.log("Default case")
+                        }
+                        break;
+                        case "C": // reseting everything
+                        result.value = "0"
+                        previousResult = 0
+                            break;
+                        default:
+
+                    }
+            
+                }
+
+
+
+                //adding functionalities to buttons
+                const numericButtons = document.getElementsByClassName("numericButton")
+
+                const functionButtons = document.getElementsByClassName("functionButton")
+
+                for (let button of numericButtons) {
+                    button.addEventListener("click", numericButtonPressed)
+                }
+
+                for (let button of functionButtons) {
+                    button.addEventListener("click", functionButtonPressed)
+                }
+
+                
+            })
+        </script>
+
+
+
+
+    </body>
+</html>
