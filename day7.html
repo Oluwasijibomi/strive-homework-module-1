@@ -53,96 +53,24 @@
         </div>
 
         <script>
-            window.addEventListener("DOMContentLoaded", function() {
-                console.log("DOM LOADED")
-                // Memory of our calculator
-                let operation = ""
-                let previousResult = 0 // FIRST OPERAND
+            window.addEventListener('DOMContentLoaded', function(){
+                console.log('DOM LOADED')
 
-                const sum = function(x,y){
-                    return x + y
-                }
-                // const sum - (x,y) ---> x + y
-
-                const diff = function(x,y){
-                    return x - y
-                }
-
-                const mul = function(x,y){
-                    return x * y
-                }
-
-                const div = function(x,y){
-                    return x / y
-                }
-
-                
-
-
-                const numericButtonPressed = function (event) {
-                    const numberPressed = event.target.value
-                    console.log(numberPressed)
-                    const result = document.getElementById("result")
-
-                    if (result.value === "0") {
-                        result.value = numberPressed
-                    } else {
-                        result.value = result.value + numberPressed
-                    }
-                }
-
-                const functionButtonPressed = function(event) {
-                    const keyPressed = event.target.value
-                    console.log(keyPressed)
-                    const result = document.getElementById("result")
-
-                    switch (keyPressed) {
-                        case "=": // compute and display the result
-
-                            switch(operation) { // switch between + -
-                            case "+":
-                                //first operand + second ----> result.value
-                                result.value = sum(previousResult, parseFloat(result.value))
-                                break;
-                            case "-":
-                                result.value = diff(previousResult, parseFloat(result.value))
-                                break;
-                            case "*":
-                                result.value = mul(previousResult, parseFloat(result.value))
-                                break;
-                            case "/":
-                                result.value = div(previousResult, parseFloat(result.value))
-                                break;
-                            default:
-                            console.log("Default case")
-                        }
-                        break;
-                        case "C": // reseting everything
-                        result.value = "0"
-                        previousResult = 0
-                            break;
-                        default:
-
-                    }
-            
-                }
-
-
-
-                //adding functionalities to buttons
                 const numericButtons = document.getElementsByClassName("numericButton")
 
-                const functionButtons = document.getElementsByClassName("functionButton")
-
-                for (let button of numericButtons) {
-                    button.addEventListener("click", numericButtonPressed)
+                const numericButtonPressed = function (event) {
+                    
                 }
-
-                for (let button of functionButtons) {
-                    button.addEventListener("click", functionButtonPressed)
-                }
-
                 
+
+                const functionButtons = document.getElementsByClassName("functionButton")
+                
+                for(let button of numericButtons) {
+                    button.addEventListener('click', numericButtonPressed)
+                }
+
+
+
             })
         </script>
 
